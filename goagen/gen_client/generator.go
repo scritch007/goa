@@ -210,7 +210,7 @@ func (g *Generator) generateClientResources(clientPkg string, funcs template.Fun
 		codegen.SimpleImport("io"),
 		codegen.SimpleImport("net/http"),
 		codegen.SimpleImport("time"),
-		codegen.NewImport("uuid", "github.com/satori/go.uuid"),
+		codegen.NewImport("uuid", "github.com/goadesign/goa/uuid"),
 	}
 	if err := file.WriteHeader("User Types", "client", imports); err != nil {
 		return err
@@ -309,7 +309,7 @@ func (g *Generator) generateResourceClient(res *design.ResourceDefinition, funcs
 		codegen.SimpleImport("time"),
 		codegen.SimpleImport("golang.org/x/net/context"),
 		codegen.SimpleImport("golang.org/x/net/websocket"),
-		codegen.NewImport("uuid", "github.com/satori/go.uuid"),
+		codegen.NewImport("uuid", "github.com/goadesign/goa/uuid"),
 	}
 	if err := file.WriteHeader("", "client", imports); err != nil {
 		return err
